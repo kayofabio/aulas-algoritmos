@@ -8,9 +8,9 @@ def nomeExiste(nomes, busca):
     return True
 
 def nomePosicao(nomes, busca):
-    for i, n in enumerate(nomes):
-        if n == busca:
-            return i
+    for pos, nome in enumerate(nomes):
+        if nome == busca:
+            return pos
 
 nomes = ["lucas", "juliana", "fernando", "amanda", "diego", "ana", "carlos", "maria"]
 
