@@ -9,10 +9,17 @@ def soma(n):
     resultado = n*(n+1)/2
     return resultado
 
+def somaSemForm(n):
+    resultado = 0
+    for i in range(1, n+1):
+        resultado += i
+    return resultado
+
 def qtdSomas(n):
     return n-1
 
 
 num = int(input("Digite um núemero: "))
-result = soma(num)
-print(f"Soma de 1 a {num} é igual a {result}\nQuantidade de somas feitas: {qtdSomas(num)}")
+result = somaSemForm(num)
+result2 = soma(num)
+print(f"Soma de 1 a {num} é igual a:\nsem fórmula {result}\ncom fórmula {result2}\nQuantidade de somas feitas: {qtdSomas(num)}")
