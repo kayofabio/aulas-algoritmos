@@ -18,7 +18,10 @@ def mediaIdade(atletas):
 def esporteMaisTreinado(atletas,nomeAtleta):
     for atleta in atletas:
         if atleta["nome"].lower() == nomeAtleta.lower():
-            return max(atleta["treinos"])
+            maior = max(atleta["treinos"].values())
+            for key, value in atleta["treinos"].items():
+                if value == maior:
+                    return key
     return None
 
 def maisDe2Modalidades(atletas):
@@ -56,8 +59,10 @@ print(f"Idade média dos atletas: {media:.2f}")
 print("="*50)
 nomeAtleta = input("digite um nome de atleta para ver o esporte mais treinado: ")
 esporte = esporteMaisTreinado(atletas ,nomeAtleta)
-print(f"esporte mais treinado: {esporte}")
-
+if esporte:
+    print(f"esporte mais treinado de {nomeAtleta}: {esporte}")
+else:
+    print("Atleta não enontrado")
 print("="*50)
 print("atletas que fazem mais de duas modalidades:")
 atletasModalidades = maisDe2Modalidades(atletas)
