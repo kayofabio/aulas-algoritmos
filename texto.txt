@@ -1,0 +1,3 @@
+Arquivo sobreescrito
+Nova linha do texto
+mais uma linha ae
